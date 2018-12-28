@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ej2</title>
+  <meta name="DC.Title" content="Web de Prensa">
+  <meta name="DC.Creator" content="Arianna Lombardi">
+  <meta name="DC.Description" content="Prensa, Noticias, Mundo">
+  <meta name="DC.Date" content="2018-11-20">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="header mobile-none">
+    <h1>Noticiario</h1>
+    <p>Lorem ipsum dolor sit amet nostrum dolorem captionis.</p>
+  </div>
+
+  <!-- navbar -->
+  <!--Attenzione!! NAVBAR NON RESPONSIVE -->
+  <div class="topnav">
+
+    <ul class="container">
+      <li><a href="#">España</a></li>
+      <li><a href="#">Internacional</a></li>
+      <li><a href="#">Politica</a></li>
+      <li><a href="#">Economia</a></li>
+      <li><a href="#">Società</a></li>
+      <li><a href="#">Cultura</a></li>
+      <li style="float:right;">
+
+        <button onclick="document.getElementById('id01').style.display='block'" class="btn-green">Login</button>
+
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+            <div class="w3-center"><br>
+              <span onclick="document.getElementById('id01').style.display='none'" class="btn-red w3-display-topright"
+                title="Close Modal">&times;</span>
+              <img src="img/ariannalombardi.jpg" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+            </div>
+
+            <form class="w3-container" action="/action_page.php">
+              <div class="w3-section">
+                <label><b>Username</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname"
+                  required>
+                <label><b>Password</b></label>
+                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+                <button class="btn-green w3-block w3-section w3-padding" type="submit">Login</button>
+                <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+              </div>
+            </form>
+
+            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+              <button onclick="document.getElementById('id01').style.display='none'" type="button" class="btn-red">Cancel</button>
+              <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+            </div>
+
+          </div>
+        </div>
+
+
+      </li>
+      <li style="float:right;"><a href="noticiario.pdf"><i class="fas fa-download"></i>&nbsp; Descargalo en pdf!</a></li>
+    </ul>
+  </div>
+
+
+
+  <div class="mobile-topnav">
+    <div class="mobile-menu">
+      <h1>Noticiario</h1>
+      <div class="dropdown">
+        <button id="open-menu-btn" class="btn-green">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div id="menu" class="dropdown-content">
+          <button id="close-menu-btn" class="btn">
+            <i class="fas fa-times"></i>
+          </button>
+          <a href="#">Espana</a>
+          <a href="#">Internacional</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+ 
+  <div class="contenitor">
+
+ <!-- resposive carousel -->
+
+    <div class="carousel-section">
+      <h2>EN EVIDENCIA ESTA SEMANA</h2>
+
+
+      <div class="w3-content w3-display-container" style="max-width:100%;">
+        <div class="mySlides">
+          <img src="img/gilet-gialli-2.jpg" alt="francia, revolucion, gilet amarillo">
+          <div class="w3-display-bottomcenter w3-container w3-padding-16 w3-black">
+            Paris, 17 dic 2018
+            <a href="#">&nbsp;&#x2192;</a>
+          </div>
+        </div>
+        <div class="mySlides"><img src="img/attualità.png" alt="etna">
+          <div class="w3-display-bottomcenter w3-container w3-padding-16 w3-black">
+            New York, 22 dic 2018
+            <a href="#">&nbsp;&#x2192;</a>
+          </div>
+        </div>
+        <div class="mySlides"><img src="img/catástrofe.jpg" alt="indonesia">
+          <div class="w3-display-bottomcenter w3-container w3-padding-16 w3-black">
+            Indonesia, 23 dic 2018
+            <a href="#">&nbsp;&#x2192;</a>
+          </div>
+        </div>
+        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
+          <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- carousel script -->
+
+    <script>
+      var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+
+    <!--end carousel-->
+    <!--corpo e articoli principali-->
+
+    <div class="row">
+
+      <div class="img-banner" style="height:210px;">
+        <img src="img/spotify_banner.png" alt="banner">
+        <div class="overlay">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>TITLE</h2>
+          <h5>Dec 10, 2018</h5>
+          <div class="img-contenitor" style="height:300px;"><img src="img/immigrants.jpg" alt="immigrants"></div>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco.<button class="btn btn-article">LEGGI &#x2192;</button></p>
+
+
+        </div>
+        <div class="card">
+          <h2>TITLE</h2>
+          <h5>Dec 10, 2018</h5>
+          <div class="img-contenitor" style="height:300px;"><img src="img/police.jpg" alt="policia, terrorismo"></div>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco.</p>
+          <button class="btn btn-article">LEGGI &#x2192;</button>
+        </div>
+        <div class="card">
+          <h2>TITLE</h2>
+          <h5>Dec 6, 2018</h5>
+          <div class="img-contenitor" style="height:300px;"><img src="img/etna.jpg" alt="etna"></div>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco.</p>
+          <button class="btn btn-article">LEGGI &#x2192;</button>
+        </div>
+        <div class="card">
+          <h2>TITLE</h2>
+          <h5>Dec 2, 2018</h5>
+          <div class="img-contenitor" style="height:300px;"><img src="img/società.jpg" alt="società"></div>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco.</p>
+          <button class="btn btn-article">LEGGI &#x2192;</button>
+        </div>
+        <div class="card">
+          <h2>TITLE</h2>
+          <h5>Dec 2, 2018</h5>
+          <div class="img-contenitor" style="height:300px;"><img src="img/cine.jpg" alt="cinema"></div>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco.</p>
+          <button class="btn btn-article">LEGGI &#x2192;</button>
+        </div>
+      </div>
+
+      <!--articoli secondari laterali-->
+
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Politica</h2>
+          <div class="img-contenitor" style="height:200px;"><img src="img/rey.jpg" alt="rey"></div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
+          <div class="img-contenitor" style="height:200px;"><img src="img/onu.jpeg" alt="rey"></div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
+          <h2>Ambiente e Salud</h2>
+          <div class="img-contenitor" style="height:200px;"><img src="img/industrie.com_hss_storage_midas_c32ee3ac6439f057fab6a6d86a41e4f4_205222423_air-pollution-picture-id518628602"
+              alt="surriscaldamento global"></div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
+          <div class="img-contenitor" style="height:200px;"><img src="img/medicina.jpg" alt="medicina"></div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
+        </div>
+        <div class="card">
+          <h4>POPULAR POST</h4>
+          <div class="img-little" style="height:200px;">
+            <img src="img/school.jpg" alt="escuela">
+            <div class="middle">
+              <h6>YOUR TITLE<br>lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...</h6><a
+                href="#">màs &#x2192;</a>
+            </div>
+          </div>
+          <div class="img-little" style="height:200px; margin-top:1rem;"><img src="img/sevilla.jpg" alt="tourismo">
+            <div class="middle">
+              <h6>YOUR TITLE<br>lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...</h6><a
+                href="#">màs &#x2192;</a>
+            </div>
+          </div>
+          <div class="img-little" style="height:200px; margin-top:1rem;"><img src="img/teatro.jpg" alt="ambiente">
+            <div class="middle">
+              <h6>YOUR TITLE<br>lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...</h6><a
+                href="#">màs &#x2192;</a>
+            </div>
+          </div>
+          <div class="img-little" style="height:200px; margin-top:1rem;"><img src="img/tecnologie.jpg" alt="ambiente">
+            <div class="middle">
+              <h6>YOUR TITLE<br>lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...</h6><a
+                href="#">màs &#x2192;</a>
+            </div>
+          </div>
+          <div class="img-little" style="height:200px; margin-top:1rem;"><img src="img/natale.jpg" alt="ambiente">
+            <div class="middle">
+              <h6>YOUR TITLE<br>lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...</h6><a
+                href="#">màs &#x2192;</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter!</p>
+
+          <div class="inner">
+            <div class="form-group">
+              <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Email address"
+                type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label>
+
+              <button class="btn btn-green w3-padding" type="submit">SEND</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+
+  <footer class="ct-footer">
+    <div class="container">
+      <form name="contentForm" enctype="multipart/form-data" method="post" action="">
+        <div class="ct-footer-pre text-center-lg">
+          <div class="inner">
+            <span>Subscribe to our newsletter to receive news & events!</span>
+          </div>
+          <div class="inner">
+            <div class="form-group">
+              <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Enter your email address"
+                type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label> <button type="submit"
+                class="btn btn-white"><i class="far fa-envelope"></i></button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <ul class="footer-list">
+        <li>
+          <h2 class="footer-list-title">ESPANA</h2>
+          <ul>
+            <li>
+              <a href="">Andalucia</a>
+            </li>
+            <li>
+              <a href="">Cataluna</a>
+            </li>
+            <li>
+              <a href="">C.Valenciana</a>
+            </li>
+            <li>
+              <a href="">Galicia</a>
+            </li>
+            <li>
+              <a href="">Madrid</a>
+            </li>
+            <li>
+              <a href="">Paìs Vasco</a>
+            </li>
+            <li>
+              <a href="">Màs Comunidades</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="footer-list-title">INTERNACIONAL</h2>
+          <ul>
+            <li>
+              <a href="">Europa</a>
+            </li>
+            <li>
+              <a href="">Estados Unidos</a>
+            </li>
+            <li>
+              <a href="">America Latina</a>
+            </li>
+            <li>
+              <a href="">Oriente Proximo</a>
+            </li>
+            <li>
+              <a href="">Asia</a>
+            </li>
+            <li>
+              <a href="">Africa</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="footer-list-title">SERVIZI</h2>
+          <ul>
+            <li>
+              <a href="">Annunci</a>
+            </li>
+            <li>
+              <a href="">Aste</a>
+            </li>
+            <li>
+              <a href="">Lavoro</a>
+            </li>
+            <li>
+              <a href="">Meteo</a>
+            </li>
+            <li>
+              <a href="">Oroscopo</a>
+            </li>
+            <li>
+              <a href="">Eventi</a>
+            </li>
+            <li>
+              <a href="">Ricette</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="footer-list-title">CONTATTI</h2>
+          <ul>
+            <li>
+              <a href="">Redazione</a>
+            </li>
+            <li>
+              <a href="">Scriveteci</a>
+            </li>
+            <li>
+              <a href="">Newsletter</a>
+            </li>
+            <li>
+              <a href="">FAQ</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>
