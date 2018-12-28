@@ -222,6 +222,7 @@ h6 {
   text-decoration: none;
   display: inline;
   z-index: 999;
+  font-size: 1.3rem;
 }
 
 /*.dropdown-content a:hover {background-color: #ddd;}
@@ -293,7 +294,7 @@ h6 {
   box-shadow: none;
   color: #fff;
   font-size: 2rem;
-  z-index: 999;
+  z-index: 997;
   top: 50%;
   background-color: transparent;
   transform: translateY(-50%);
