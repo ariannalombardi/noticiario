@@ -297,15 +297,14 @@ h6 {
 .img-contenitor {
   background-color: #aaa;
   width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
 }
 
 .img-contenitor img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 4px;
 }
 
 .img-contenitor img:hover {
@@ -356,13 +355,60 @@ h6 {
 
 /* card effect for articles */
 .card {
+  display: block;
   background-color: white;
-  padding: 20px;
   margin-top: 20px;
+}
+
+.card:hover {
+  transform: scale(1.007);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10),
+    0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card .overlay-card {
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.card .img-contenitor .overlay-card {
+  opacity: 0;
+  transition: all .3s;
+}
+
+.card:hover .overlay-card {
+  display: flex;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.50);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .card p {
   color: dimgrey;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.card small {
+  font-size: .8rem;
+  font-weight: 600;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.card .card-body {
+  padding: 20px;
+  position: relative;
 }
 
 /* clear floats after the columns */
@@ -715,9 +761,14 @@ address a:hover {
   line-height: 1;
 }
 
-.btn:focus, .btn:active, button:focus, button:active, a:focus, a:active {
+.btn:focus,
+.btn:active,
+button:focus,
+button:active,
+a:focus,
+a:active {
   outline: none !important;
-} 
+}
 
 
 /* FOOTER */
@@ -728,10 +779,11 @@ address a:hover {
   width: 100%;
   flex-wrap: wrap;
   list-style-type: none;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 20px;
   padding-inline-start: 0;
   padding-inline-end: 0;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .footer-list>li {
@@ -755,9 +807,15 @@ address a:hover {
   margin: 0;
 }
 
-.footer-list-title {
-
+.footer-list a {
+  opacity: .8;
 }
+
+.footer-list a:hover {
+  opacity: 1;
+}
+
+.footer-list-title {}
 
 /* Footer Media Queries */
 
@@ -967,8 +1025,8 @@ address a:hover {
   }
 
   .carousel-section {
-    padding:0px;
-    padding-bottom:1rem;
+    padding: 0px;
+    padding-bottom: 1rem;
   }
 }
 
@@ -991,7 +1049,8 @@ address a:hover {
     display: block;
   }
 
-  .leftcolumn, .rightcolumn {
+  .leftcolumn,
+  .rightcolumn {
     padding: 0;
   }
 }
@@ -1000,7 +1059,9 @@ address a:hover {
   .contenitor {
     max-width: 720px;
   }
-  .leftcolumn, .rightcolumn {
+
+  .leftcolumn,
+  .rightcolumn {
     padding: 0;
   }
 }
