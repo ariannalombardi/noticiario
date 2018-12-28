@@ -24,7 +24,6 @@
   </div>
 
   <!-- navbar -->
-  <!--Attenzione!! NAVBAR NON RESPONSIVE -->
   <div class="topnav">
 
     <ul class="container">
@@ -173,7 +172,7 @@ function showDivs(n) {
 
     <div class="row">
 
-      <div class="img-banner" style="height:210px;">
+      <div class="img-banner">
         <img src="img/spotify_banner.png" alt="banner">
         <div class="overlay">
         </div>
@@ -254,6 +253,19 @@ function showDivs(n) {
           <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
         </div>
         <div class="card">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter!</p>
+  
+            <div class="inner">
+              <div class="form-group">
+                <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Email address"
+                  type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label>
+  
+                <button class="btn btn-green w3-padding" type="submit">SEND</button>
+              </div>
+            </div>
+          </div>
+        <div class="card">
           <h4>POPULAR POST</h4>
           <div class="img-little" style="height:200px;">
             <img src="img/school.jpg" alt="escuela">
@@ -287,19 +299,7 @@ function showDivs(n) {
             </div>
           </div>
         </div>
-        <div class="card">
-          <h3>Newsletter</h3>
-          <p>Subscribe to our newsletter!</p>
-
-          <div class="inner">
-            <div class="form-group">
-              <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Email address"
-                type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label>
-
-              <button class="btn btn-green w3-padding" type="submit">SEND</button>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -318,7 +318,9 @@ function showDivs(n) {
               <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Enter your email address"
                 type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label> <button type="submit"
                 class="btn btn-white"><i class="far fa-envelope"></i></button>
+                <a href="mailto:ariannalombardi.lmb@gmail.com"><div class="contact-label"><h4>contattaci!</h4></div></a>
             </div>
+            
           </div>
         </div>
       </form>
