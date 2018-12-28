@@ -248,6 +248,7 @@ h6 {
   position: relative;
   background-color: #aaa;
   width: 80%;
+  height:210px;
   margin: 50px auto;
 }
 
@@ -722,6 +723,15 @@ address a:hover {
 
 /* FOOTER */
 
+.contact-label {
+  float:right;
+  color:white;
+  margin-bottom:0px;
+}
+.contact-label h4 {
+  color:white;
+}
+
 .footer-list {
   display: flex;
   flex-direction: row;
@@ -967,8 +977,14 @@ address a:hover {
   }
 
   .carousel-section {
-    padding:0px;
+    padding:0rem;
     padding-bottom:1rem;
+  }
+
+  .img-banner {
+    height:150px;
+    width:100%;
+    margin-bottom:20px;
   }
 }
 
