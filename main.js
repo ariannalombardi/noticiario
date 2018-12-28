@@ -1,20 +1,23 @@
 function openMenu() {
-  document.getElementById('menu').style.display='flex'
+  document.getElementById('menu').style.display = 'flex'
 }
+
 function closeMenu() {
-  document.getElementById('menu').style.display='none'
+  document.getElementById('menu').style.display = 'none'
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+$('document').ready(function () {
+  $('#open-menu-btn').click(openMenu)
+  $('#close-menu-btn').click(closeMenu)
+  $('#menu a').click(closeMenu)
 
-  // OPEN MENU
-  var menuButton = document.getElementById('open-menu-btn')
-  menuButton.addEventListener("click", openMenu);
-  
-  // CLOSE MENU
-  var closeButton = document.getElementById('close-menu-btn')
-  closeButton.addEventListener("click", closeMenu);
-
-  document.querySelector('#menu a').addEventListener("click", closeMenu)
-  
-}, false);
+  $('.carousel-feed').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: '<button type="button" class="carousel-next"><i class="fa fa-chevron-right"></i></button>',
+    prevArrow: '<button type="button" class="carousel-prev"><i class="fa fa-chevron-left"></i></button>',
+  })
+})

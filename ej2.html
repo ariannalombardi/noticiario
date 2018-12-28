@@ -11,31 +11,22 @@
   <meta name="DC.Date" content="2018-11-20">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./slick-theme.css" />
+  <link href="style.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
-  <div class="header mobile-none">
-    <h1>Noticiario</h1>
-    <p>Lorem ipsum dolor sit amet nostrum dolorem captionis.</p>
-  </div>
+  <div class="contenitor">
+    <div class="header mobile-none">
+      <h1>Noticiario</h1>
+      <p>Lorem ipsum dolor sit amet nostrum dolorem captionis.</p>
 
-  <!-- navbar -->
-  <div class="topnav">
-
-    <ul class="container">
-      <li><a href="#">España</a></li>
-      <li><a href="#">Internacional</a></li>
-      <li><a href="#">Politica</a></li>
-      <li><a href="#">Economia</a></li>
-      <li><a href="#">Società</a></li>
-      <li><a href="#">Cultura</a></li>
-      <li style="float:right;">
-
-        <button onclick="document.getElementById('id01').style.display='block'" class="btn-green">Login</button>
+      <div class="login-button">
+        <button onclick="document.getElementById('id01').style.display='block'" class="btn">Login</button>
 
         <div id="id01" class="w3-modal">
           <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
@@ -59,16 +50,33 @@
             </form>
 
             <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-              <button onclick="document.getElementById('id01').style.display='none'" type="button" class="btn-red">Cancel</button>
+              <button onclick="document.getElementById('id01').style.display='none'" type="button" class="btn">Cancel</button>
               <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
             </div>
 
           </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <div class="topnav">
+
+    <ul class="container">
+      <li><a href="#">España</a></li>
+      <li><a href="#">Internacional</a></li>
+      <li><a href="#">Politica</a></li>
+      <li><a href="#">Economia</a></li>
+      <li><a href="#">Società</a></li>
+      <li><a href="#">Cultura</a></li>
+      <li>
+
+
 
 
       </li>
-      <li style="float:right;"><a href="noticiario.pdf"><i class="fas fa-download"></i>&nbsp; Descargalo en pdf!</a></li>
     </ul>
   </div>
 
@@ -104,70 +112,29 @@
     <div class="carousel-section">
       <h2>EN EVIDENCIA ESTA SEMANA</h2>
 
-
-      <div class="w3-content w3-display-container" style="max-width:100%;">
-        <div class="mySlides">
-          <img src="img/gilet-gialli-2.jpg" alt="francia, revolucion, gilet amarillo">
-          <div class="w3-display-bottomcenter w3-container w3-padding-16 w3-black">
-            Paris, 17 dic 2018
-            <a href="#">&nbsp;&#x2192;</a>
+      <div class="carousel-feed">
+        <div class="carousel-item" style="background-image: url('img/gilet-gialli-2.jpg')">
+          <div class="carousel-caption">
+            <small><b>Paris</b> 17 dic 2018</small>
+            <h3>Lorem Ipsum dolor set</h3>
           </div>
         </div>
-        <div class="mySlides"><img src="img/attualità.png" alt="etna">
-          <div class="w3-display-bottomcenter w3-container w3-padding-16 w3-black">
-            New York, 22 dic 2018
-            <a href="#">&nbsp;&#x2192;</a>
+        <div class="carousel-item" style="background-image: url('img/attualità.png')">
+          <div class="carousel-caption">
+            <small><b>New York,</b> 22 dic 2018</small>
+            <h3>Lorem Ipsum dolor set</h3>
           </div>
         </div>
-        <div class="mySlides"><img src="img/catástrofe.jpg" alt="indonesia">
-          <div class="w3-display-bottomcenter w3-container w3-padding-16 w3-black">
-            Indonesia, 23 dic 2018
-            <a href="#">&nbsp;&#x2192;</a>
+        <div class="carousel-item" style="background-image: url('img/catástrofe.jpg')">
+          <div class="carousel-caption">
+            <small><b>Indonesia</b> 23 dic 2018</small>
+            <h3>Lorem Ipsum dolor set</h3>
           </div>
-        </div>
-        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
-          <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-          <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
         </div>
       </div>
+
     </div>
 
-    <!-- carousel script -->
-
-    <script>
-      var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-</script>
-
-
-    <!--end carousel-->
     <!--corpo e articoli principali-->
 
     <div class="row">
@@ -181,7 +148,7 @@ function showDivs(n) {
 
     <div class="row">
       <div class="leftcolumn">
-
+        <h2>LATEST NEWS</h2>
         <a href="#" class="card">
           <div class="img-contenitor" style="height:300px;">
             <img src="img/immigrants.jpg" alt="immigrants">
@@ -197,53 +164,117 @@ function showDivs(n) {
             </p>
           </div>
         </a>
+        <a href="#" class="card">
+          <div class="img-contenitor" style="height:300px;">
+            <img src="img/cine.jpg" alt="immigrants">
+            <div class="overlay-card">Click to show more</div>
+          </div>
+          <div class="card-body">
+            <h3>TITLE</h3>
+            <small>Dec 10, 2018</small>
+            <p>
+              Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco.
+            </p>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <div class="img-contenitor" style="height:300px;">
+            <img src="img/police.jpg" alt="immigrants">
+            <div class="overlay-card">Click to show more</div>
+          </div>
+          <div class="card-body">
+            <h3>TITLE</h3>
+            <small>Dec 10, 2018</small>
+            <p>
+              Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco.
+            </p>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <div class="img-contenitor" style="height:300px;">
+            <img src="img/etna.jpg" alt="immigrants">
+            <div class="overlay-card">Click to show more</div>
+          </div>
+          <div class="card-body">
+            <h3>TITLE</h3>
+            <small>Dec 10, 2018</small>
+            <p>
+              Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco.
+            </p>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <div class="img-contenitor" style="height:300px;">
+            <img src="img/società.jpg" alt="immigrants">
+            <div class="overlay-card">Click to show more</div>
+          </div>
+          <div class="card-body">
+            <h3>TITLE</h3>
+            <small>Dec 10, 2018</small>
+            <p>
+              Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco.
+            </p>
+          </div>
+        </a>
 
-        <div class="card">
-          <h2>TITLE</h2>
-          <h5>Dec 10, 2018</h5>
-          <div class="img-contenitor" style="height:300px;"><img src="img/police.jpg" alt="policia, terrorismo"></div>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco.</p>
-          <button class="btn btn-article">LEGGI &#x2192;</button>
-        </div>
-        <div class="card">
-          <h2>TITLE</h2>
-          <h5>Dec 6, 2018</h5>
-          <div class="img-contenitor" style="height:300px;"><img src="img/etna.jpg" alt="etna"></div>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco.</p>
-          <button class="btn btn-article">LEGGI &#x2192;</button>
-        </div>
-        <div class="card">
-          <h2>TITLE</h2>
-          <h5>Dec 2, 2018</h5>
-          <div class="img-contenitor" style="height:300px;"><img src="img/società.jpg" alt="società"></div>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco.</p>
-          <button class="btn btn-article">LEGGI &#x2192;</button>
-        </div>
-        <div class="card">
-          <h2>TITLE</h2>
-          <h5>Dec 2, 2018</h5>
-          <div class="img-contenitor" style="height:300px;"><img src="img/cine.jpg" alt="cinema"></div>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco.</p>
-          <button class="btn btn-article">LEGGI &#x2192;</button>
-        </div>
       </div>
 
       <!--articoli secondari laterali-->
 
       <div class="rightcolumn">
-        <div class="card">
-          <h2>Politica</h2>
-          <div class="img-contenitor" style="height:200px;"><img src="img/rey.jpg" alt="rey"></div>
-          <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
-          <div class="img-contenitor" style="height:200px;"><img src="img/onu.jpeg" alt="rey"></div>
+        <div>
+          <h2>HOT TOPICS</h2>
+          <a href="#" class="card">
+            <div class="img-contenitor" style="height:200px;">
+              <img src="img/rey.jpg" alt="rey">
+              <div class="overlay-card">Click to show more</div>
+            </div>
+            <div class="card-body">
+              <h2>Politica</h2>
+              <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <div class="img-contenitor" style="height:200px;">
+              <img src="img/industrie.com_hss_storage_midas_c32ee3ac6439f057fab6a6d86a41e4f4_205222423_air-pollution-picture-id518628602"
+                alt="rey">
+              <div class="overlay-card">Click to show more</div>
+            </div>
+            <div class="card-body">
+              <h2>Ambiente e Salud</h2>
+              <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <div class="img-contenitor" style="height:200px;">
+              <img src="img/medicina.jpg" alt="rey">
+              <div class="overlay-card">Click to show more</div>
+            </div>
+            <div class="card-body">
+              <h2>Politica</h2>
+              <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <div class="img-contenitor" style="height:200px;">
+              <img src="img/rey.jpg" alt="rey">
+              <div class="overlay-card">Click to show more</div>
+            </div>
+            <div class="card-body">
+              <h2>Politica</h2>
+              <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+            </div>
+          </a>
+
+          <!-- <div class="img-contenitor" style="height:200px;"><img src="img/onu.jpeg" alt="rey"></div>
           <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
           <h2>Ambiente e Salud</h2>
           <div class="img-contenitor" style="height:200px;"><img src="img/industrie.com_hss_storage_midas_c32ee3ac6439f057fab6a6d86a41e4f4_205222423_air-pollution-picture-id518628602"
@@ -251,29 +282,74 @@ function showDivs(n) {
           <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
           <div class="img-contenitor" style="height:200px;"><img src="img/medicina.jpg" alt="medicina"></div>
           <p>Some text about me in culpa qui officia deserunt mollit anim..<a href="#"><b> &#x2192;</b></a></p>
+         -->
         </div>
+
         <div class="card">
+          <div class="card-body">
             <h3>Newsletter</h3>
             <p>Subscribe to our newsletter!</p>
-  
+
             <div class="inner">
               <div class="form-group">
                 <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Email address"
                   type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label>
-  
+
                 <button class="btn btn-green w3-padding" type="submit">SEND</button>
               </div>
             </div>
           </div>
-        <div class="card">
+        </div>
+
+        <div>
+          <h2>POPULAR POSTS</h4>
+
+            <a href="#" class="card">
+              <div class="img-little" style="height:200px;">
+                <img src="img/school.jpg" alt="escuela">
+                <div class="card-overlay-small">
+                  <b>YOUR TITLE</b>
+                  <br>
+                  lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="img-little" style="height:200px;">
+                <img src="img/sevilla.jpg" alt="escuela">
+                <div class="card-overlay-small">
+                  <b>YOUR TITLE</b>
+                  <br>
+                  lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="img-little" style="height:200px;">
+                <img src="img/teatro.jpg" alt="escuela">
+                <div class="card-overlay-small">
+                  <b>YOUR TITLE</b>
+                  <br>
+                  lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="img-little" style="height:200px;">
+                <img src="img/tecnologie.jpg" alt="escuela">
+                <div class="card-overlay-small">
+                  <b>YOUR TITLE</b>
+                  <br>
+                  lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...
+                </div>
+              </div>
+            </a>
+
+        </div>
+
+
+        <!-- <div class="card">
           <h4>POPULAR POST</h4>
-          <div class="img-little" style="height:200px;">
-            <img src="img/school.jpg" alt="escuela">
-            <div class="middle">
-              <h6>YOUR TITLE<br>lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...</h6><a
-                href="#">màs &#x2192;</a>
-            </div>
-          </div>
           <div class="img-little" style="height:200px; margin-top:1rem;"><img src="img/sevilla.jpg" alt="tourismo">
             <div class="middle">
               <h6>YOUR TITLE<br>lorem ipsum dolor sit amet castrorum inquit caesar in escuela artediez fuerit...</h6><a
@@ -298,8 +374,8 @@ function showDivs(n) {
                 href="#">màs &#x2192;</a>
             </div>
           </div>
-        </div>
-        
+        </div> -->
+
       </div>
     </div>
   </div>
@@ -318,9 +394,13 @@ function showDivs(n) {
               <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Enter your email address"
                 type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label> <button type="submit"
                 class="btn btn-white"><i class="far fa-envelope"></i></button>
-                <a href="mailto:ariannalombardi.lmb@gmail.com"><div class="contact-label"><h4>contattaci!</h4></div></a>
+              <a href="mailto:ariannalombardi.lmb@gmail.com">
+                <div class="contact-label">
+                  <h4>contattaci!</h4>
+                </div>
+              </a>
             </div>
-            
+
           </div>
         </div>
       </form>
@@ -424,7 +504,12 @@ function showDivs(n) {
 
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <script src="./main.js"></script>
+
 </body>
 
 </html>

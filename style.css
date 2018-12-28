@@ -14,7 +14,7 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  background-color: white;
+  position: relative;
 }
 
 h2,
@@ -47,6 +47,7 @@ h6 {
   color: #111;
   font-size: 12px;
   padding: 12px 30px;
+  cursor: pointer;
 }
 
 .btn-green {
@@ -107,14 +108,32 @@ h6 {
 
 /* Header */
 .header {
-  height: 250px;
   padding: 30px;
   text-align: center;
-  background: white;
+  background-color: transparent;
 }
 
 .header h1 {
-  font-size: 50px;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 900;
+}
+
+.header p {
+  margin: 0;
+}
+
+.header .login-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #333;
+}
+
+.header .login-button button {
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 /* navbar */
@@ -126,26 +145,34 @@ h6 {
   /* Safari */
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 998;
 }
 
 .topnav ul {
   list-style-type: none;
   margin: 0;
-  padding: 1rem;
+  padding: .8rem;
+  font-size: .9rem;
   overflow: hidden;
   background-color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .topnav li {
   float: left;
+  text-align: center;
 }
 
 .topnav li a {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  /* padding: 14px 16px; */
   text-decoration: none;
 }
 
@@ -243,6 +270,55 @@ h6 {
   padding: 0
 }
 
+.carousel-feed {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.carousel-next.slick-arrow,
+.carousel-prev.slick-arrow {
+  position: absolute;
+  background-color: none;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 2rem;
+  z-index: 999;
+  top: 50%;
+  background-color: transparent;
+  transform: translateY(-50%);
+}
+
+.carousel-next.slick-arrow {
+  right: 0;
+}
+
+.carousel-prev.slick-arrow {
+  left: 0;
+}
+
+.carousel-caption {
+  text-align: left;
+  color: #fff;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+
+.carousel-caption h3 {
+  color: #fff;
+  margin: 0;
+}
+
 /* banner */
 .img-banner {
   position: relative;
@@ -300,6 +376,7 @@ h6 {
   width: 100%;
   border-radius: 4px 4px 0 0;
   overflow: hidden;
+  position: relative;
 }
 
 .img-contenitor img {
@@ -327,6 +404,25 @@ h6 {
   backface-visibility: hidden;
 }
 
+.card-overlay-small {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: .8rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+}
+
+.card-overlay-small b {
+  font-size: 1rem;
+}
+
 .middle {
   transition: .5s ease;
   background-color: white;
@@ -345,20 +441,12 @@ h6 {
   color: darkgreen;
 }
 
-.img-little:hover .middle {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.img-little:hover img {
-  opacity: 0.6;
-}
-
 /* card effect for articles */
 .card {
   display: block;
   background-color: white;
   margin-top: 20px;
+  border-radius: 4px;
 }
 
 .card:hover {
@@ -411,6 +499,7 @@ h6 {
   padding: 20px;
   position: relative;
 }
+
 
 /* clear floats after the columns */
 .row:after {
@@ -1094,3 +1183,7 @@ a:active {
 
   }  
 } */
+
+.w3-modal {
+  z-index: 999;
+}
